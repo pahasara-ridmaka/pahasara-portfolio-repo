@@ -1,4 +1,4 @@
-<h1 align = "center">UI Design for Portfolio Site</h1>
+<h3 align = "left">UI Design for Portfolio Site</h3>
 <br>
 
 <img src = "UI-Design/ui.png">
