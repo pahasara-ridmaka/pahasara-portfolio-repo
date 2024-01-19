@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #020617;
+}
+
+.container {
+  width: 100%;
+}
+
+nav {
+  overflow: hidden;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+nav ul {
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 15px;
+}
+nav ul li {
+  display: inline;
+  font-size: 17px;
+}
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 14px;
+}
+nav ul li a:hover {
+  color: #5276BF;
+}
+
+.section-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+#section-header {
+  top: 0;
+  background-image: url("/static/img/asset0.png"), url("/static/img/asset.png");
+  background-position: bottom 250px center, bottom 480px center;
+  background-repeat: no-repeat, no-repeat;
+}
+#section-header h1 {
+  font-size: 6rem;
+}
+#section-header h3 {
+  font-size: 2rem;
+}
+
+#section-bio .section-container {
+  padding: 10rem;
+}
+#section-bio p {
+  font-size: 1.5rem;
+}/*# sourceMappingURL=style.css.map */

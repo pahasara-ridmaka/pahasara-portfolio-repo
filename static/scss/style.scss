@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+$primary-color : #5276BF;
+$secondary-color : #020617;
+
+body{
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background-color: $secondary-color;
+}
+
+
+
+.container{
+    width: 100%;
+    // display: inline-block;
+}
+
+nav{
+    overflow: hidden;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    // border-bottom: white solid 0.5px;
+    ul{
+        text-align: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 15px;
+
+        li{
+            display: inline;
+            font-size: 17px;
+            a{
+                color: #f2f2f2;
+                text-decoration: none;
+                padding: 14px;
+                &:hover{
+                    // background-color: #111;
+                    color: $primary-color;
+                }
+            }
+        }
+        
+    }
+}
+
+.section-container{
+
+    display: grid;
+    place-items:center;
+    height: 100vh;
+    text-align: center;
+}
+
+#section-header{
+    top: 0;
+    background-image: url("/static/img/asset0.png"), url("/static/img/asset.png");
+
+    background-position: bottom 250px center, bottom 480px center;
+    background-repeat: no-repeat, no-repeat;
+
+    h1{
+        font-size: 6rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+}
+
+
+#section-bio{
+    .section-container{
+        padding: 10rem;
+    }
+
+    p{
+        font-size: 1.5rem;
+    }
+}
