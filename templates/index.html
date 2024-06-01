@@ -1,21 +1,191 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block content %}
+  <div class="flex lg:py-0 relative">
+    <!-- background blue blurred circle -->
+    <div id="follower" class="top-[30%] right-[5px] w-96 h-96 fixed rounded-full bg-blue-600 filter blur-3xl opacity-20"></div>
+    <!-- Side bar -->
+    <div class="w-1/2 text-white fixed h-screen pl-24">
+      <!-- side bar container -->
+      <div class="h-full pl-24 py-12">
+        <!-- Header -->
+        <div class="h-[80%] py-10">
+          <div class="grid items-center gap-4">
+            <h1 class="font-semibold drop-shadow-md text-5xl font-">Pahasara Ridmaka</h1>
+            <div class="">
+              <h2 class="font-mono px-2 font-thin text-teal-300 inline-block bg-slate-800 rounded-lg">Python Django Developer | Graphics Designer</h2>
+            </div>
+            <p class="font-thin text-slate-300 font-mono w-2/3">" – curious, enthusiastic, and a student most of the time. I like to spend the rest of my time writing code, especially in Python."</p>
+          </div>
+        </div>
 
-{% block content %}
-  <!-- HEADER section -->
-  <section id="section-header">
-    <div class="section-container">
-      <div class="text">
-        <h1>Lorem Ipsum</h1>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, facere?</h3>
+        <!-- footer -->
+        <div class="flex justify-end flex-col h-[20%] pb-4 gap-4">
+          <!-- Social Icons -->
+          <div class="flex gap-5 fa-lg text-slate-500">
+            <i class="fa-brands fa-github hover:text-slate-400"></i>
+            <i class="fa-brands fa-linkedin hover:text-slate-400"></i>
+            <i class="fa-brands fa-facebook hover:text-slate-400"></i>
+            <i class="fa-brands fa-medium hover:text-slate-400"></i>
+          </div>
+
+          <!-- Copyright text -->
+          <p class="text-slate-400">Designed and developed by Pahasara Ridmaka</p>
+        </div>
       </div>
     </div>
-  </section>
+    <!-- ////////////////////////////////////////////////////////////////// -->
+    <!-- main -->
+    <div class="w-1/2 ml-[55%] pr-24">
+      <!-- container -->
+      <div class="my-24">
+        <!-- about me -->
+        <div class="">
+          <p>"Hey, I'm Pahasara – curious, enthusiastic, and a student most of the time. I like to spend the rest of my time writing code, especially in Python."</p>
+        </div>
 
-  <!-- BIO section -->
-  <section id="section-bio">
-    <div class="section-container">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat perferendis expedita ab laborum? Modi mollitia libero hic ea eaque eum aliquid quaerat deleniti praesentium autem doloremque, nam blanditiis quam nisi quia necessitatibus iste velit, illum illo natus ratione suscipit dolor! Sed rerum autem nemo natus cupiditate officiis dicta optio itaque quam. Quidem officia veniam quasi praesentium consectetur vitae illo.</p>
+        <br /><br /><br />
+        <!-- Projects -->
+        <div class="flex flex-col gap-4">
+          <!-- projects area begin -->
+
+          <!-- ////////////////////////////////////////////////////// -->
+          {% comment %}Project box{% endcomment %}
+          <div class="h-auto grid grid-cols-5 hover:shadow-xl hover:ring-1 hover:ring-slate-500 hover:rounded-md hover:bg-slate-800/40">
+            {% comment %}date{% endcomment %}
+            <div class="col-span-2 p-4">
+              <p>2022 -</p>
+            </div>
+            {% comment %}description box{% endcomment %}
+            <div class="col-span-3 p-4">
+              {% comment %}title{% endcomment %}
+              <div class="flex items-center justify-between">
+                <p class="font-semibold">Project title</p>
+                <a href=""><i class="fa-solid fa-arrow-trend-up mr-5"></i></a>
+              </div>
+              <p class="font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et excepturi reiciendis facilis asperiores debitis itaque quos ad hic voluptatem totam neque, consequatur eos at aspernatur amet architecto sunt, iusto nihil.</p>
+
+              {% comment %}used technologies{% endcomment %}
+              <div class="py-2 flex space-x-3">
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Html</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Css</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Javascript</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Python</button>
+              </div>
+            </div>
+          </div>
+          <!-- ////////////////////////////////////////////////////// -->
+          <!-- ////////////////////////////////////////////////////// -->
+          {% comment %}Project box{% endcomment %}
+          <div class="h-auto grid grid-cols-5 hover:shadow-xl hover:ring-1 hover:ring-slate-500 hover:rounded-md hover:bg-slate-800/40">
+            {% comment %}date{% endcomment %}
+            <div class="col-span-2 p-4">
+              <p>2022 -</p>
+            </div>
+            {% comment %}description box{% endcomment %}
+            <div class="col-span-3 p-4">
+              {% comment %}title{% endcomment %}
+              <div class="">
+                <p class="font-semibold">Project title</p>
+              </div>
+              <p class="font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et excepturi reiciendis facilis asperiores debitis itaque quos ad hic voluptatem totam neque, consequatur eos at aspernatur amet architecto sunt, iusto nihil.</p>
+
+              {% comment %}used technologies{% endcomment %}
+              <div class="py-2 flex space-x-3">
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Html</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Css</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Javascript</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Python</button>
+              </div>
+            </div>
+          </div>
+          <!-- ////////////////////////////////////////////////////// -->
+          <!-- ////////////////////////////////////////////////////// -->
+          {% comment %}Project box{% endcomment %}
+          <div class="h-auto grid grid-cols-5 hover:shadow-xl hover:ring-1 hover:ring-slate-500 hover:rounded-md hover:bg-slate-800/40">
+            {% comment %}date{% endcomment %}
+            <div class="col-span-2 p-4">
+              <p>2022 -</p>
+            </div>
+            {% comment %}description box{% endcomment %}
+            <div class="col-span-3 p-4">
+              {% comment %}title{% endcomment %}
+              <div class="">
+                <p class="font-semibold">Project title</p>
+              </div>
+              <p class="font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et excepturi reiciendis facilis asperiores debitis itaque quos ad hic voluptatem totam neque, consequatur eos at aspernatur amet architecto sunt, iusto nihil.</p>
+
+              {% comment %}used technologies{% endcomment %}
+              <div class="py-2 flex space-x-3">
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Html</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Css</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Javascript</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Python</button>
+              </div>
+            </div>
+          </div>
+          <!-- ////////////////////////////////////////////////////// -->
+          <!-- ////////////////////////////////////////////////////// -->
+          {% comment %}Project box{% endcomment %}
+          <div class="h-auto grid grid-cols-5 hover:shadow-xl hover:ring-1 hover:ring-slate-500 hover:rounded-md hover:bg-slate-800/40">
+            {% comment %}date{% endcomment %}
+            <div class="col-span-2 p-4">
+              <p>2022 -</p>
+            </div>
+            {% comment %}description box{% endcomment %}
+            <div class="col-span-3 p-4">
+              {% comment %}title{% endcomment %}
+              <div class="">
+                <p class="font-semibold">Project title</p>
+              </div>
+              <p class="font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et excepturi reiciendis facilis asperiores debitis itaque quos ad hic voluptatem totam neque, consequatur eos at aspernatur amet architecto sunt, iusto nihil.</p>
+
+              {% comment %}used technologies{% endcomment %}
+              <div class="py-2 flex space-x-3">
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Html</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Css</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Javascript</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Python</button>
+              </div>
+            </div>
+          </div>
+          <!-- ////////////////////////////////////////////////////// -->
+          <!-- ////////////////////////////////////////////////////// -->
+          {% comment %}Project box{% endcomment %}
+          <div class="h-auto grid grid-cols-5 hover:shadow-xl hover:ring-1 hover:ring-slate-500 hover:rounded-md hover:bg-slate-800/40">
+            {% comment %}date{% endcomment %}
+            <div class="col-span-2 p-4">
+              <p>2022 -</p>
+            </div>
+            {% comment %}description box{% endcomment %}
+            <div class="col-span-3 p-4">
+              {% comment %}title{% endcomment %}
+              <div class="">
+                <p class="font-semibold">Project title</p>
+              </div>
+              <p class="font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et excepturi reiciendis facilis asperiores debitis itaque quos ad hic voluptatem totam neque, consequatur eos at aspernatur amet architecto sunt, iusto nihil.</p>
+
+              {% comment %}used technologies{% endcomment %}
+              <div class="py-2 flex space-x-3">
+                <button class="flex leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Html</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Css</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Javascript</button>
+                <button class="flex items-center leading-5 px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">Python</button>
+              </div>
+            </div>
+          </div>
+          <!-- ////////////////////////////////////////////////////// -->
+          <!-- projects area end -->
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+
+  <!-- testing -->
+  <!--   <div class="h-screen flex items-center justify-center bg-gray-900">
+    <div class="relative w-full h-full bg-center bg-cover" style="background-image: url('https://www.timeoutdubai.com/cloud/timeoutdubai/2021/11/30/Dreamy-beaches-in-middle-east.jpg');">
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative z-10 flex items-center justify-center w-full h-full text-white">
+        <h1 class="text-4xl font-bold">Hello, World!</h1>
+      </div>
+    </div>
+  </div>  -->
 {% endblock %}
