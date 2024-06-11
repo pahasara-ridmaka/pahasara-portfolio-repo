@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Post
 from projects.models import Project
+from django.views.generic import DetailView
 
 
 #  - Home Page 
@@ -19,3 +20,11 @@ def post_list(request):
     context = {"posts" : posts}
 
     return render(request, 'post_list.html', context )
+
+# def post_detail(request):
+
+#     return render(request, 'post_detail.html')
+
+class PostDetail(DetailView):
+    model = Post
+    template_name = 'post_detail.html'
