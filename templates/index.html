@@ -1,184 +1,43 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
-  <div class="flex lg:py-0 relative">
-    <!-- background blue blurred circle -->
+{% extends 'base.html' %} {% load static %}
 
-    <!-- SECTION - SIDE BAR -->
-    <div class="w-1/2 text-white fixed h-screen pl-24">
-      <!-- side bar container -->
-      <div class="h-full pl-24 py-4">
-        <!-- Header -->
-        <div class="h-[80%] py-10">
-          <div class="grid items-center gap-4 relative">
-            <h1 class="font-semibold drop-shadow-md text-5xl font-">Pahasara Ridmaka</h1>
-            <div class="mb-5">
-              <h2 class="font-mono px-2 font-thin text-teal-300 inline-block bg-slate-800 rounded-lg">Python Django Developer | Graphics Designer</h2>
-            </div>
-            {% comment %} <p class="font-thin text-slate-300 font-mono w-2/3">" – curious, enthusiastic, and a student most of the time. I like to spend the rest of my time writing code, especially in Python."</p> {% endcomment %}
+{% block content %}
+  <div class="my-5">
+    <h1 class="mb-5 font-mono text-slate-300 text-lg">Discover the projects I'm currently contributing to or have contributed to.</h1>
+  </div>
 
-            {% comment %} <p class="leading-5 font-thin text-xs text-slate-300 font-mono w-2/3">
-              I am Pahasara Ridmaka, a student of (B.Sc.) Physical Science ICT at University of Sri Jayewardenepura. I am passionate about programming, especially in Python.
-              <br /><br />
-              <span class="font-semibold text-teal-300">Education:</span>
-              <br /><br />
-              I completed my primary education at Am/Panama Maha Vidyalaya and secondary education at Dharmadutha College - Badulla. Currently, I am pursuing higher education at the University of Sri Jayewardenepura.
-              <br /><br />
-              <span class="font-semibold text-teal-300">Skills:</span> I am proficient in several programming languages, including Bash, C, CSS, HTML, Java, JavaScript, Python, and SQL. My experience extends to frameworks and tools like Bootstrap, Flask, Django, NumPy, Pandas, BeautifulSoup, GitHub Pages, and Heroku. I work with databases such as MySQL and SQLite and use development tools like Git, VS Code, and Ubuntu. For design, I am skilled in Figma, Adobe Photoshop, and Illustrator, and I have experience in web development with WordPress.
-              <br /><br />
-              <span class="font-semibold text-teal-300">Interests:</span>
-              <br /><br />
-              My professional interests lie in Python and the Django framework.
-              <br /><br />
-              <span class="font-semibold text-teal-300">Hobbies:</span>
-              <br /><br />
-              In my free time, I enjoy reading fantasy novels, playing video games, listening to metal music (with Linkin Park being my favorite band), and designing graphics.
-              <br /><br />
-              <span class="font-semibold text-teal-300">Goals:</span>
-              <br /><br />
-              I aim to enhance my skills in Python and web development and contribute to graphic design projects.
-            </p> {% endcomment %}
+  <!-- Projects -->
+  {% comment %} <div class="gap-4">
+    {% endcomment %}
+    {% for project in projects %}
+      <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-            <p class="leading-10 font-thin text-slate-400 font-mono w-2/3 text-justify">
-              I am Pahasara Ridmaka, a passionate student pursuing a degree in Physical Science with a focus on ICT at the University of Sri Jayewardenepura. I have developed a strong foundation in various programming languages and tools, with a deep interest in Python and web development.{% comment %} <br /><br />
-              <span class="text-teal-300">Skills and Expertise:</span>
-              <br /><br />
-              Languages: C, CSS, HTML, Java, JavaScript, Python, SQL. Frameworks and Tools: Bootstrap, Flask, Django, NumPy, Pandas, BeautifulSoup, Heroku, PythonAnywhere. Databases: MySQL, SQLite. Development Tools: Bash, Git, VS Code, Ubuntu Design Tools: Figma, Adobe Photoshop, Illustrator Web Development: WordPress Professional Interests: I am particularly passionate about Python and enjoy working with the Django framework.
-              <br /><br />
-              <span class="text-teal-300">Hobbies and Interests:</span>
-              <br /><br />
-              Reading fantasy novels Playing video games Listening to metal music (favorite band: Linkin Park) Designing graphics in my free time Future Goals: I aim to enhance my skills in Python, web development, and graphic design to contribute to innovative projects and solutions.{% endcomment %}
-            </p>
+      <div class="flex h-auto hover:shadow-xl hover:ring-1 hover:ring-slate-500 hover:rounded-md mb-4 hover:bg-slate-800/40">
+        <!-- Left Side -->
+        <div class="p-4 w-[30%]">
+          <p>{{ project.date }} -</p>
+        </div>
 
-            <p class="text-slate-300 w-2/3 font-semibold leading-loose -tracking-wider text-justify">{ Java | Python | C | jQuery |JavaScript | HTML | CSS | TailwindCSS | SASS | Bootstrap | BeautifulSoup | Flask | Django | PythonAnywhere | MySQL | SQLite | JSON | Bash | Git | VS Code | Ubuntu | Figma | Adobe Photoshop | Adobe Illustrator }</p>
+        <!-- Right Side -->
+        <!-- Title -->
+        <div class="p-4 w-[70%]">
+          <a href="" class="flex justify-between">
+            <p class="font-semibold hover:text-teal-300">{{ project.title }}</p>
 
-            <p class="leading-10 font-thin text-slate-400 font-mono w-2/3 text-justify">Passionate about Python, particularly Django, I also enjoy reading fantasy novels, playing video games, and listening to Linkin Park. Graphic design is another hobby. Moving forward, I aim to advance my Python, web development, and graphic design skills for innovative contributions.</p>
-
-            {% comment %} <!-- - Skill Section -->
-            <div class="flex w-2/3 justify-center items-center gap-5">
-              <!-- -NAME -->
-              <div class="w-[20%] text-sm flex justify-end">
-                <h1>C</h1>
-              </div>
-
-              <!-- SKILL BAR -->
-              <div class="h-2.5 w-[60%] bg-slate-700">
-                <div class="bg-teal-300 h-2.5 w-[45%]"></div>
-              </div>
-            </div>
-
-            <div class="flex w-2/3 justify-center items-center gap-5">
-              <!-- -NAME -->
-              <div class="w-[20%] text-sm flex justify-end">
-                <h1>Java</h1>
-              </div>
-
-              <!-- SKILL BAR -->
-              <div class="h-2.5 w-[60%] bg-slate-700">
-                <div class="bg-teal-300 h-2.5 w-[65%]"></div>
-              </div>
-            </div>
-
-            <div class="flex w-2/3 justify-center items-center gap-5">
-              <!-- -NAME -->
-              <div class="w-[20%] text-sm flex justify-end">
-                <h1>Python</h1>
-              </div>
-
-              <!-- SKILL BAR -->
-              <div class="h-2.5 w-[60%] bg-slate-700">
-                <div class="bg-teal-300 h-2.5 w-[80%]"></div>
-              </div>
-            </div> {% endcomment %}
-
-            <!-- End of skill -->
-            {% comment %} <p class="leading-7 font-thin text-xs text-slate-300 font-mono w-2/3">
-              I am Pahasara Ridmaka, a student pursuing a degree in Physical Science with a focus on ICT at the University of Sri Jayewardenepura. Proficient in programming languages like C, CSS, HTML, Java, JavaScript, Python, and SQL, I also have experience with frameworks and tools such as TailwindCSS, Pytube, Bootstrap, Flask, Django, NumPy, Pandas, and more. My database skills include MySQL and SQLite, while I'm adept with development tools like Bash, Git, VS Code, and Ubuntu. Design-wise, I work with Figma, Adobe Photoshop, and Illustrator, and have experience in web development using WordPress.
-              <br /><br />
-              Passionate about Python, particularly Django, I also enjoy reading fantasy novels, playing video games, and listening to Linkin Park. Graphic design is another hobby. Moving forward, I aim to advance my Python, web development, and graphic design skills for innovative contributions.
-            </p> {% endcomment %}
+            <span><i class="fa-solid fa-arrow-trend-up mr-5"></i></span>
+          </a>
+          <!-- DESCRIPTION -->
+          <p class="font-thin">{{ project.description }}</p>
+          <!-- USED TECHNOLOGIES -->
+          <div class="py-2 flex space-x-3">
+            {% for tag in project.tags.all %}
+              <button type="button" class="flex px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">{{ tag.name }}</button>
+            {% endfor %}
           </div>
         </div>
-        <!-- SECTION NAV BAR -->
-
-        <div class="fixed font-semibold text-slate-300 flex gap-16 items-center py-4">
-          <a class="">|</a>
-          <a class="hover:text-teal-300" href="{% url 'home' %}">Home</a>
-          {% comment %} <a class="hover:text-teal-300" href="">About</a>{% endcomment %}
-          <a class="">|</a>
-          <a class="hover:text-teal-300" href="{% url 'posts' %}">Blog</a>
-          <a class="">|</a>
-          {% comment %} <a class="hover:text-teal-300" href="">Contact me</a> {% endcomment %}
-        </div>
-        <!-- NAV BAR END -->
-        <!-- SECTION - footer -->
-        <div class="flex justify-end flex-col h-[20%] pb-4 gap-4">
-          <!-- Social Icons -->
-          <div class="flex gap-5 fa-lg text-slate-500">
-            <a href="https://github.com/pahasara-ridmaka" target="_blank"><i class="fa-brands fa-github hover:text-slate-400"></i></a>
-            <a href="https://www.linkedin.com/in/pahasara-ridmaka/" target="_blank"><i class="fa-brands fa-linkedin hover:text-slate-400"></i></a>
-            <a href="https://www.facebook.com/pahasararidmaka/" target="_blank"><i class="fa-brands fa-facebook hover:text-slate-400"></i></a>
-            <a href="https://medium.com/@codemonke" target="_blank"><i class="fa-brands fa-medium hover:text-slate-400"></i></a>
-          </div>
-
-          <!-- Copyright text -->
-          <p class="text-slate-400">
-            Designed and developed by <a class="text-teal-300" href="https://github.com/pahasara-ridmaka" target="_blank">Pahasara Ridmaka</a>
-          </p>
-        </div>
       </div>
-    </div>
 
-    <!-- ////////////////////////////////////////////////////////////////// -->
-    <!-- SECTION main -->
-    <div class="w-1/2 ml-[55%] pr-24 my-24">
-      <!-- container -->
-      <div class="">
-        <div class="my-8">
-          <h1 class="mb-5 font-mono text-slate-300 text-lg">Discover the projects I'm currently contributing to or have contributed to.</h1>
-        </div>
-
-        <!-- Projects -->
-        {% comment %} <div class="gap-4">
-          {% endcomment %}
-          {% for project in projects %}
-            <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-            <div class="flex h-auto hover:shadow-xl hover:ring-1 hover:ring-slate-500 hover:rounded-md mb-4 hover:bg-slate-800/40">
-              <!-- Left Side -->
-              <div class="p-4 w-[30%]">
-                <p>{{ project.date }} -</p>
-              </div>
-
-              <!-- Right Side -->
-              <!-- Title -->
-              <div class="p-4 w-[70%]">
-                <a href="" class="flex justify-between">
-                  <p class="font-semibold hover:text-teal-300">{{ project.title }}</p>
-
-                  <span><i class="fa-solid fa-arrow-trend-up mr-5"></i></span>
-                </a>
-                <!-- DESCRIPTION -->
-                <p class="font-thin">{{ project.description }}</p>
-                <!-- USED TECHNOLOGIES -->
-                <div class="py-2 flex space-x-3">
-                  {% for tag in project.tags.all %}
-                    <button type="button" class="flex px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">{{ tag.name }}</button>
-                  {% endfor %}
-                </div>
-              </div>
-            </div>
-
-            <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-          {% endfor %}
-          <!-- projects end -->
-          {% comment %}
-        </div> {% endcomment %}
-      </div>
-    </div>
-    <div id="follower" class="top-[30%] right-[5px] w-96 h-96 fixed rounded-full bg-blue-600 filter blur-3xl opacity-20 -z-20"></div>
-
-    <!-- MY IMG -->
-    <div class="fixed opacity-25 -z-20 -bottom-[5%] right-0 w-64 h-auto">
-      <img class="" src="{% static 'img/bg.png' %}" alt="" />
-    </div>
+      <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    {% endfor %}
+    <!-- projects end -->
   </div>
 {% endblock %}

@@ -1,10 +1,55 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1 class="text-5xl">Thama hadana gaman hiks</h1>
+  <div class="my-8">
+    <h1 class="mb-5 font-mono text-slate-300 text-lg">Stay updated with my latest articles.</h1>
+  </div>
 
-  {% for post in posts %}
+  {% comment %} {% for post in posts %}
     <h2>{{ post.title }}</h2>
     <p>{{ post.body }}</p>
+  {% endfor %} {% endcomment %}
+
+  {% for post in posts %}
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="flex h-auto hover:shadow-xl hover:ring-1 hover:ring-slate-500 hover:rounded-md mb-4 hover:bg-slate-800/40">
+      <!-- Left Side -->
+      <div class="p-4 w-[30%]">
+        <div class="h-full w-full bg-red-600 text-red-700"></div>
+      </div>
+
+      <!-- Right Side -->
+
+      <!-- Title -->
+      <div class="p-4 w-[70%]">
+        <!-- TAGS -->
+        <p class="text-sm pb-1">#PYTHON</p>
+        <a href="" class="flex justify-between">
+          <p class="font-semibold hover:text-teal-300 text-xl">{{ post.title }}</p>
+
+          <span><i class="fa-solid fa-arrow-trend-up mr-5"></i></span>
+        </a>
+        <!-- AUTHOR -->
+        <div class="flex my-2">
+          <div class="bg-red-700 h-6 w-6 mr-2"></div>
+          <div class="flex gap-7">
+            <p class="font-thin">PAHASARA RIDMAKA</p>
+            <p class="text-xs content-center font-thin">{{ post.created_at }}</p>
+          </div>
+        </div>
+
+        {% comment %} <!-- DESCRIPTION -->
+        <p class="font-thin">{{ post.body }}</p> {% endcomment %}
+        {% comment %} <!-- USED TECHNOLOGIES -->
+        <div class="py-2 flex space-x-3">
+          {% for tag in project.tags.all %}
+            <button type="button" class="flex px-3 py-1 rounded-full bg-teal-400/10 text-teal-300 text-sm font-semibold">{{ tag.name }}</button>
+          {% endfor %}
+        </div> {% endcomment %}
+      </div>
+    </div>
+
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   {% endfor %}
 {% endblock %}

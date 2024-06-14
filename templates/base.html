@@ -13,16 +13,74 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body class="bg-slate-900 text-slate-400 selection:text-teal-900 selection:bg-teal-300">
-    {% include 'navbar.html' %}
+    <div class="flex lg:py-0 relative h-full">
+      <!-- SECTION - SIDE BAR -->
+      <div class="w-1/2 text-white fixed h-screen pl-24">
+        <!-- side bar container -->
+        <div class="h-full pl-24 py-4">
+          <!-- Header -->
+          <div class="h-[80%] py-10">
+            <div class="grid items-center gap-4 relative">
+              <h1 class="font-semibold drop-shadow-md text-5xl font-">Pahasara Ridmaka</h1>
+              <div class="mb-5">
+                <h2 class="font-mono px-2 font-thin text-teal-300 inline-block bg-slate-800 rounded-lg">Python Django Developer | Graphics Designer</h2>
+              </div>
 
-    <!-- code goes here -->
+              <p class="leading-7 font-thin text-slate-400 font-mono w-2/3 text-justify">- a passionate student pursuing a degree in Physical Science - ICT at the University of Sri Jayewardenepura. I have developed a strong foundation in various programming languages and tools, with a deep interest in Python and web development.</p>
 
-    <!-- Notification messages -->
-    {% block content %}
+              <p class="text-slate-300 w-2/3 font-semibold leading-loose -tracking-wider text-justify">{ Java | Python | C | jQuery |JavaScript | HTML | CSS | TailwindCSS | SASS | Bootstrap | BeautifulSoup | Flask | Django | PythonAnywhere | MySQL | SQLite | JSON | Bash | Git | VS Code | Ubuntu | Figma | Adobe Photoshop | Adobe Illustrator }</p>
+            </div>
+            <!-- SECTION NAV BAR -->
 
-    {% endblock %}
+            <div class="font-semibold text-slate-300 flex gap-16 justify-center py-24 content-center w-2/3">
+              <a class="">|</a>
+              <a class="hover:text-teal-300" href="{% url 'home' %}">Home</a>
+              {% comment %} <a class="hover:text-teal-300" href="">About</a>{% endcomment %}
+              <a class="">|</a>
+              <a class="hover:text-teal-300" href="{% url 'posts' %}">Blog</a>
+              <a class="">|</a>
+              {% comment %} <a class="hover:text-teal-300" href="">Contact me</a> {% endcomment %}
+            </div>
+            <!-- NAV BAR END -->
+          </div>
 
-    <!-- js -->
+          <!-- SECTION - footer -->
+          <div class="flex justify-end flex-col h-[20%] pb-4 gap-4">
+            <!-- Social Icons -->
+            <div class="flex gap-5 fa-lg text-slate-500">
+              <a href="https://github.com/pahasara-ridmaka" target="_blank"><i class="fa-brands fa-github hover:text-slate-400"></i></a>
+              <a href="https://www.linkedin.com/in/pahasara-ridmaka/" target="_blank"><i class="fa-brands fa-linkedin hover:text-slate-400"></i></a>
+              <a href="https://www.facebook.com/pahasararidmaka/" target="_blank"><i class="fa-brands fa-facebook hover:text-slate-400"></i></a>
+              <a href="https://medium.com/@codemonke" target="_blank"><i class="fa-brands fa-medium hover:text-slate-400"></i></a>
+            </div>
+
+            <!-- Copyright text -->
+            <p class="text-slate-400">
+              Designed and developed by <a class="text-teal-300" href="https://github.com/pahasara-ridmaka" target="_blank">Pahasara Ridmaka</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION main -->
+      <div class="w-1/2 ml-[55%] pr-24 my-4">
+        <!-- container -->
+        <div class="">
+          {% block content %}
+
+          {% endblock %}
+        </div>
+
+        <!-- background assets -->
+        <div id="follower" class="top-[30%] right-[5px] w-96 h-96 fixed rounded-full bg-blue-600 filter blur-3xl opacity-20 -z-20"></div>
+        <!-- MY IMG -->
+        <div class="fixed opacity-25 -z-20 -bottom-[5%] right-0 w-64 h-auto">
+          <img class="" src="{% static 'img/bg.png' %}" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVA SCRIPT -->
     <script src="{% static 'js/app.js' %}"></script>
   </body>
 </html>
