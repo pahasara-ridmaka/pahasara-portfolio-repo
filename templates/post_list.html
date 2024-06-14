@@ -1,8 +1,21 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load static %}
 
 {% block content %}
   <div class="my-8">
     <h1 class="mb-5 font-mono text-slate-300 text-lg">Stay updated with my latest articles.</h1>
+    {% comment %} <!-- write an artcle -->
+    <h1>{{ request.path }}</h1>
+    {% if user.is_authenticated %}
+      <a href="{% url 'write' %}">Write an Artle</a>
+    {% else %}
+      <div class="flex gap-4">
+        <a href="{% url 'login' %}?next={{ request.path }}">Log In to Write</a>
+        <p>|</p>
+        <a href="">Create Account</a>
+      </div>
+    {% endif %} {% endcomment %}
+
+    <a href="{% url 'write' %}">Write an Article</a>
   </div>
 
   {% comment %} {% for post in posts %}
@@ -13,10 +26,13 @@
   {% for post in posts %}
     <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-    <div class="flex h-auto hover:shadow-xl hover:ring-1 hover:ring-slate-500 hover:rounded-md mb-4 hover:bg-slate-800/40">
+    <div class="flex h-36 hover:shadow-xl hover:ring-1 hover:ring-slate-500 hover:rounded-md mb-4 hover:bg-slate-800/40">
       <!-- Left Side -->
       <div class="p-4 w-[30%]">
-        <div class="h-full w-full bg-red-600 text-red-700"></div>
+        <div class="h-full w-full relative">
+          <img class="w-full h-full object-cover z-0" src="{{ post.thumbnail.url }}" alt="" />
+          <div class="z-10 w-full h-full inset-0 object-cover bg-gradient-to-t from-slate-900/80 absolute"></div>
+        </div>
       </div>
 
       <!-- Right Side -->
@@ -25,7 +41,7 @@
       <div class="p-4 w-[70%]">
         <!-- TAGS -->
         <p class="text-sm pb-1">#PYTHON</p>
-        <a href="" class="flex justify-between">
+        <a href="{% url 'post-detail' post.pk %}" class="flex justify-between">
           <p class="font-semibold hover:text-teal-300 text-xl">{{ post.title }}</p>
 
           <span><i class="fa-solid fa-arrow-trend-up mr-5"></i></span>
@@ -34,7 +50,7 @@
         <div class="flex my-2">
           <div class="bg-red-700 h-6 w-6 mr-2"></div>
           <div class="flex gap-7">
-            <p class="font-thin">PAHASARA RIDMAKA</p>
+            <p class="font-thin">{{ post.author.first_name|upper }} {{ post.author.last_name|upper }}</p>
             <p class="text-xs content-center font-thin">{{ post.created_at }}</p>
           </div>
         </div>
